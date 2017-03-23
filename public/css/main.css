@@ -1,0 +1,316 @@
+html, body {
+  height: 100%;
+  min-width: 320px;
+  max-width: 100%;
+}
+html {
+  font-family: Arial, Helvetica, 'Varela', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 1.25;
+}
+body {
+  font-size: 11px;
+}
+html, .dark, button, input, select, textarea, a {
+  color: #37454d;
+}
+body, dl, ol, ul, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+select {
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+  background: #fff url('../img/arrow-drop.png') right 10px center no-repeat;
+}
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+a, a:active, a:focus {
+  outline-width: 0;
+}
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+.btn, .btn:active, .btn:focus, .btn:hover, .btn:link, .btn:visited {
+  color: #fff;
+}
+.btn {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 1;
+  text-align: center;
+  font-weight: 700;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: 13px 13px 13px;
+  margin: 4px 0;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: #0faccf;
+  border-color: #0faccf;
+}
+.light-blue {
+  color: #0faccf;
+}
+.orange {
+  color: #f46820;
+}
+.underline {
+  border-bottom: 4px solid #fff;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 auto;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(41, 51, 57, 0.5);
+  height: 56px;
+}
+#logo-link {
+  font-family: 'Varela', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  align-self: center;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 86.7px;
+}
+#logo-link h1 {
+  letter-spacing: -1.5px;
+  display: inline-block;
+  position: relative;
+  top: 45%;
+  transform: translate(0, -50%);
+}
+/*
+ * #222525 | #447197 | #e2b112
+ * #d76e17 | #27213a | #dbe5df (off-white)
+ * #c40e41 | #142339 | #e3e5e1 (off-white)
+ * #f47453 | #fac55b | #55c5dc (https://dribbble.com/shots/3315590-Color-Palette)
+ * #f35154 | #ffa54f | #5b96b8 (https://dribbble.com/shots/1039714-Color-Scheme-Detail-animated)
+ * #02c3e2 | #fcc04e | #f97a66 
+ */
+
+.vi {
+  color: #105879; /* 0faccf */
+}
+.gl {
+  color: #105879;
+}
+.oo {
+  color: #f46820;
+}
+
+.nav {
+  list-style: none;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+#navbar .nav {
+  float: right;
+  height: 100%;
+}
+#navbar .main-nav {
+  display: none;
+}
+#navbar .nav-collapsed .menu-icon {
+    font-size: 1.15em;
+    margin: 4px auto 4px;
+  }
+#navbar .nav > li {
+  display: flex;
+  height: 100%;
+}
+#navbar .nav > li > a {
+  display: flex;
+  height: 100%;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 0 solid #ebeced;
+  padding: 0 12px;
+  font-size: 12px;
+  min-width: 80px;
+}
+#navbar .nav > li > a:first-child {
+  border-width: 0 0 0 1px;
+}
+#navbar .nav > li.dropdown {
+  position: relative;
+  display: inline-block;
+}
+#navbar .nav > li.dropdown > .dropdown-content {
+  list-style: none;
+  position: absolute;
+  margin-top: 12px;
+  max-width: 256px;
+  min-width: 175px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(41,51,57,.5);
+  z-index: 999;
+  -webkit-padding-start: 0px;
+  padding: 4px;
+  overflow: hidden;
+  display: none;
+}
+#navbar .nav > li.dropdown > .dropdown-content:before {
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  content: "";
+}
+#navbar .nav > li.dropdown > .dropdown-content > li {
+  border-bottom: 1px solid #ebeced;
+  text-align: left;
+}
+#navbar .nav > li.dropdown > .dropdown-content > li:hover {
+  background-color: #ebeced;
+}
+#navbar .nav > li.dropdown > .dropdown-content > li > a {
+  color: #36454d;
+  font-size: 14px;
+  line-height: 44px;
+  padding: 0 8px;
+  display: block;
+}
+
+@media only screen and (min-width: 779px) {
+  #navbar .main-nav {
+    display: flex;
+  }
+  #navbar .nav-collapsed {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #navbar {
+    height: 64px;
+  }
+  #navbar .nav > li > a {
+    font-size: 14px;
+  }
+  #navbar .nav > li > a {
+    padding: 0 25px;
+    flex-direction: row;
+  }
+  #navbar .nav-collapsed > li > a {
+    min-width: 128px;
+  }
+  #navbar .nav > li > a .icon {
+    font-size: 1.15em;
+  }
+  #navbar .nav-collapsed .menu-icon {
+    margin: 0 8px 0 0;
+  }
+}
+
+
+#header {
+  height: calc(100vh - 64px);
+  position: relative;
+  /*background: linear-gradient(rgba(7, 44, 61, 0.8), rgba(7, 44, 61, 0.8)), url('../img/hero.jpg');*/
+  background: linear-gradient(rgba(2, 16, 22, 0.8), rgba(2, 16, 22, 0.8)), url('../img/hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+#header .hero-line {
+  display: block;
+}
+#header .hero {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 30px;
+}
+#header .hero-title {
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 auto 45px;
+}
+#header .hero-form {
+  text-align: center;
+  width: 100%;
+  padding: 0 15px;
+}
+#header .hero-form button[type="submit"] {
+  margin: 0;
+  font-size: 18px;
+  min-width: 44px;
+  width: 100%;
+  height: 60px;
+}
+#header .form-field {
+  height: 100%;
+  vertical-align: middle;
+  color: #646464;
+}
+#header .hero-form select {
+  height: 60px;
+  font-size: 16px;
+  margin: 20px 0;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 779px) {
+  #header .hero-form select {
+    min-width: 120px;
+    width: 120px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #header .hero-form button[type="submit"] {
+    min-width: 134px;
+    width: 134px;
+  }
+}
